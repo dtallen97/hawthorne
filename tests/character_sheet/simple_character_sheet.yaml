@@ -1,0 +1,14 @@
+stat-groups:
+  - name: Attributes
+    base-value: 10
+    modifier: Floor(ScaleAndOffset(value, -base-value, 0.5))
+    stats: Strength, Intellect, Agility
+  - name: Skills
+    base-value: 0
+    modifier: Identity(value)
+    stats: First Aid
+
+stats:
+  - name: First Aid
+    parent: Intellect
+    parent-conversion: modifier
